@@ -45,6 +45,14 @@ enableRobotsTXT = true
       name = 'Contact'
       pageRef = '/contact'
       weight = 50
+    [[languages.en.menu.main]]
+      name = 'Tenants'
+      pageRef = '/tenants'
+      weight = 60
+    [[languages.en.menu.main]]
+      name = 'Groups & Clubs'
+      pageRef = '/groups-clubs'
+      weight = 70
 
   [languages.cy]
     languageName = 'Cymraeg'
@@ -74,3 +82,11 @@ enableRobotsTXT = true
       name = 'Cysylltu'
       pageRef = '/cysylltu'
       weight = 50
+    [[languages.cy.menu.main]]
+      name = 'Tenantiaid'
+      pageRef = '/tenantiaid'
+      weight = 60
+    [[languages.cy.menu.main]]
+      name = 'Grwpiau a Chlybiau'
+      pageRef = '/grwpiau-clwbiau'
+      weight = 70

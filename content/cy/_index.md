@@ -15,6 +15,12 @@ quicklinks:
   - title: "Cyfleusterau"
     text: "Llogi'r neuadd, ystafelloedd cymunedol a mannau treftadaeth."
     link: "/cyfleusterau"
+  - title: "Tenantiaid"
+    text: "Pobl a busnesau sydd wedi'u lleoli yn y neuadd."
+    link: "/tenantiaid"
+  - title: "Grwpiau a Chlybiau"
+    text: "Cyfarfodydd wythnosol a sesiynau cymunedol rheolaidd."
+    link: "/grwpiau-clwbiau"
 facilities:
   - title: "Prif Neuadd"
     image: "/images/hall-exterior.jpg"

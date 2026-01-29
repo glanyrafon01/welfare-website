@@ -15,6 +15,12 @@ quicklinks:
   - title: "Facilities"
     text: "Hall hire, community rooms, and heritage spaces."
     link: "/facilities"
+  - title: "Tenants"
+    text: "Meet the people and businesses based in the hall."
+    link: "/tenants"
+  - title: "Groups & Clubs"
+    text: "Weekly gatherings and regular community sessions."
+    link: "/groups-clubs"
 facilities:
   - title: "Main Hall"
     image: "/images/hall-exterior.jpg"
