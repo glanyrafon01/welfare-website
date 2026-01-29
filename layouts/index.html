@@ -1,0 +1,104 @@
+{{ define "main" }}
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Params.tagline }}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="{{ .Params.hero_primary_link | relLangURL }}">{{ .Params.hero_primary_text }}</a>
+          <a class="button button-secondary" href="{{ .Params.hero_secondary_link | relLangURL }}">{{ .Params.hero_secondary_text }}</a>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">{{ i18n "quick_links" }}</h2>
+      <div class="card-grid">
+        {{ range .Params.quicklinks }}
+          <div class="card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .text }}</p>
+            <a href="{{ .link | relLangURL }}">{{ i18n "read_more" }}</a>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: rgba(33, 87, 50, 0.05);">
+    <div class="container">
+      <h2 class="section-title">{{ i18n "facilities" }}</h2>
+      <div class="facility-gallery">
+        {{ range .Params.facilities }}
+          <div class="facility-tile">
+            <img src="{{ .image }}" alt="{{ .title }}">
+            <div>{{ .title }}</div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">{{ i18n "latest_news" }}</h2>
+      <div class="news-list">
+        {{ range first 3 (where .Site.RegularPages "Section" "news") }}
+          <article class="news-item">
+            <div class="news-meta">{{ .Date.Format "2 Jan 2006" }}</div>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>{{ .Summary }}</p>
+          </article>
+        {{ end }}
+      </div>
+      {{ range first 1 (where .Site.Sections "Section" "news") }}
+        <p><a href="{{ .RelPermalink }}">{{ i18n "view_all_news" }}</a></p>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="section" style="background: rgba(74, 109, 140, 0.08);">
+    <div class="container">
+      <h2 class="section-title">{{ i18n "partners" }}</h2>
+      <div class="partners">
+        {{ range .Site.Params.partners }}
+          <div class="partner-card">
+            <strong>{{ .name }}</strong>
+            <a href="{{ .url }}" target="_blank" rel="noopener">{{ i18n "read_more" }}</a>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">{{ i18n "contact" }}</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <strong>{{ i18n "address" }}</strong>
+          <p>{{ .Site.Params.address }}</p>
+        </div>
+        <div class="contact-card">
+          <strong>{{ i18n "phone" }}</strong>
+          <p>{{ .Site.Params.phone }}</p>
+        </div>
+        <div class="contact-card">
+          <strong>{{ i18n "email" }}</strong>
+          <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+        </div>
+        <div class="contact-card">
+          <strong>{{ i18n "map" }}</strong>
+          <p><a href="{{ .Site.Params.mapLink }}" target="_blank" rel="noopener">{{ i18n "get_in_touch" }}</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

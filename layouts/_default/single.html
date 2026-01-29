@@ -1,0 +1,55 @@
+{{ define "main" }}
+  <section class="page-hero">
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}
+        <p>{{ . }}</p>
+      {{ end }}
+    </div>
+  </section>
+  <section class="content">
+    <div class="container">
+      {{ .Content }}
+      {{ if eq .Params.translationKey "partners" }}
+        <div class="partners" style="margin-top: 24px;">
+          {{ range .Site.Params.partners }}
+            <div class="partner-card">
+              <strong>{{ .name }}</strong>
+              <a href="{{ .url }}" target="_blank" rel="noopener">{{ i18n "read_more" }}</a>
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
+      {{ if eq .Params.translationKey "contact" }}
+        <div class="contact-grid" style="margin-top: 24px;">
+          <div class="contact-card">
+            <strong>{{ i18n "address" }}</strong>
+            <p>{{ .Site.Params.address }}</p>
+          </div>
+          <div class="contact-card">
+            <strong>{{ i18n "phone" }}</strong>
+            <p>{{ .Site.Params.phone }}</p>
+          </div>
+          <div class="contact-card">
+            <strong>{{ i18n "email" }}</strong>
+            <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+          </div>
+          <div class="contact-card">
+            <strong>{{ i18n "map" }}</strong>
+            <p><a href="{{ .Site.Params.mapLink }}" target="_blank" rel="noopener">{{ i18n "get_in_touch" }}</a></p>
+          </div>
+        </div>
+      {{ end }}
+      {{ with .Params.gallery }}
+        <div class="facility-gallery" style="margin-top: 24px;">
+          {{ range . }}
+            <div class="facility-tile">
+              <img src="{{ .image }}" alt="{{ .caption }}">
+              <div>{{ .caption }}</div>
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

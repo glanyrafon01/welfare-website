@@ -1,0 +1,14 @@
+<div class="lang-switch" aria-label="Language switcher">
+  {{ $current := .Site.Language.Lang }}
+  {{ range .Site.Languages }}
+    {{ $lang := .Lang }}
+    {{ $target := $.Site.Home.RelPermalink }}
+    {{ range first 1 (where $.Site.Home.AllTranslations "Lang" $lang) }}
+      {{ $target = .RelPermalink }}
+    {{ end }}
+    {{ range first 1 (where $.Translations "Lang" $lang) }}
+      {{ $target = .RelPermalink }}
+    {{ end }}
+    <a href="{{ $target }}" class="{{ if eq $lang $current }}active{{ end }}">{{ upper $lang }}</a>
+  {{ end }}
+</div>

@@ -1,0 +1,20 @@
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>{{ .Site.Title }}</h3>
+      <p>{{ .Site.Params.description }}</p>
+    </div>
+    <div>
+      <h3>{{ i18n "contact" }}</h3>
+      <p>{{ i18n "address" }}: {{ .Site.Params.address }}</p>
+      <p>{{ i18n "phone" }}: {{ .Site.Params.phone }}</p>
+      <p>{{ i18n "email" }}: <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+    </div>
+    <div>
+      <h3>{{ i18n "partners" }}</h3>
+      {{ range .Site.Params.partners }}
+        <p><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></p>
+      {{ end }}
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,26 @@
+---
+title: "Abercrave Miners Welfare Hall"
+tagline: "Community, heritage, and care at the heart of Abercrave."
+hero_primary_text: "Book the hall"
+hero_primary_link: "/contact"
+hero_secondary_text: "Learn the history"
+hero_secondary_link: "/history"
+quicklinks:
+  - title: "History of the Hall"
+    text: "A short timeline of the hall's founding and its role in village life."
+    link: "/history"
+  - title: "Mining Tradition"
+    text: "Stories of the coal industry and the people who shaped Abercrave."
+    link: "/mining-tradition"
+  - title: "Facilities"
+    text: "Hall hire, community rooms, and heritage spaces."
+    link: "/facilities"
+facilities:
+  - title: "Main Hall"
+    image: "/images/hall-exterior.jpg"
+  - title: "Community Rooms"
+    image: "/images/hall-exterior.jpg"
+  - title: "Memorial Spaces"
+    image: "/images/hall-exterior.jpg"
+---
+Abercrave Miners Welfare Hall is a community landmark built on solidarity and pride. This bilingual website shares the hall's story, facilities, and news while making it easy for local people to stay connected.

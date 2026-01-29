@@ -1,0 +1,76 @@
+baseURL = 'https://abercrave-welfare-hall.vercel.app/'
+languageCode = 'en-gb'
+title = 'Abercrave Miners Welfare Hall'
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+
+[params]
+  description = 'A bilingual community website for Abercrave Miners Welfare Hall.'
+  email = 'hello@abercravewelfare.org'
+  phone = '01639 999999'
+  address = 'Abercrave Miners Welfare Hall, Abercrave, Powys, SA9'
+  mapLink = 'https://maps.google.com/?q=Abercrave+Miners+Welfare+Hall'
+  partners = [
+    { name = 'Ystradgynlais Town Council', url = 'https://www.ystradgynlais-tc.gov.uk/' },
+    { name = 'CISWO', url = 'https://www.ciswo.org.uk/' }
+  ]
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    languageCode = 'en-gb'
+    weight = 1
+    title = 'Abercrave Miners Welfare Hall'
+    contentDir = 'content/en'
+    [languages.en.params]
+      tagline = 'Community, heritage, and care at the heart of Abercrave.'
+    [[languages.en.menu.main]]
+      name = 'History'
+      pageRef = '/history'
+      weight = 10
+    [[languages.en.menu.main]]
+      name = 'Mining Tradition'
+      pageRef = '/mining-tradition'
+      weight = 20
+    [[languages.en.menu.main]]
+      name = 'Facilities'
+      pageRef = '/facilities'
+      weight = 30
+    [[languages.en.menu.main]]
+      name = 'News'
+      pageRef = '/news'
+      weight = 40
+    [[languages.en.menu.main]]
+      name = 'Contact'
+      pageRef = '/contact'
+      weight = 50
+
+  [languages.cy]
+    languageName = 'Cymraeg'
+    languageCode = 'cy-gb'
+    weight = 2
+    title = 'Neuadd Lles Glowyr Abercraf'
+    contentDir = 'content/cy'
+    [languages.cy.params]
+      tagline = 'Cymuned, treftadaeth a gofal wrth galon Abercraf.'
+    [[languages.cy.menu.main]]
+      name = 'Hanes'
+      pageRef = '/hanes'
+      weight = 10
+    [[languages.cy.menu.main]]
+      name = 'Traddodiad Glofaol'
+      pageRef = '/traddodiad-glofaol'
+      weight = 20
+    [[languages.cy.menu.main]]
+      name = 'Cyfleusterau'
+      pageRef = '/cyfleusterau'
+      weight = 30
+    [[languages.cy.menu.main]]
+      name = 'Newyddion'
+      pageRef = '/news'
+      weight = 40
+    [[languages.cy.menu.main]]
+      name = 'Cysylltu'
+      pageRef = '/cysylltu'
+      weight = 50

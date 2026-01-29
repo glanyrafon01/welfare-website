@@ -1,0 +1,6 @@
+- **Heritage Green**: `#215732`
+- **Union Red**: `#B22222`
+- **Antique Gold**: `#D4AF37`
+- **Charcoal Grey**: `#2E2E2E`
+- **Off-White**: `#F9F5EC`
+- **Slate Blue**: `#4A6D8C`

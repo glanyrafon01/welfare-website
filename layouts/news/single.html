@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <section class="page-hero">
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+      <p class="news-meta">{{ .Date.Format "2 Jan 2006" }}</p>
+    </div>
+  </section>
+  <section class="content">
+    <div class="container">
+      {{ .Content }}
+      {{ with .CurrentSection }}
+        <p><a href="{{ .RelPermalink }}">{{ i18n "back_to_news" }}</a></p>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
